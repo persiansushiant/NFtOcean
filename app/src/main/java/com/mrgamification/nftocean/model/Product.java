@@ -13,7 +13,21 @@ public class Product extends SugarRecord<Product> {
     int EScore;
     int totalScore;
     int AuthorId;
+    String link;
 
+    public Product(String name, String imgSRC, int level, int AScore, int BScore, int CScore, int DScore, int EScore, int totalScore, int authorId, String link) {
+        this.name = name;
+        this.imgSRC = imgSRC;
+        this.level = level;
+        this.AScore = AScore;
+        this.BScore = BScore;
+        this.CScore = CScore;
+        this.DScore = DScore;
+        this.EScore = EScore;
+        this.totalScore = totalScore;
+        AuthorId = authorId;
+        this.link = link;
+    }
 
     public int getTotalScore() {
         return totalScore;

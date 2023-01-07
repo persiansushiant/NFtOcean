@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         List<Match> myList = Match.find(Match.class, "feature = ? and LooserId = ?", myFeatures[index - 1], getUserId() + "");
         int score = 0;
         for (Match match : myList) {
-            score += match.getLooserPoint() + 400;
+            score += match.getLooserPoint() - 400;
         }
         int newScore = score / myList.size();
         SavenewScore(newScore);
